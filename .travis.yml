@@ -9,9 +9,8 @@ before_install:
 - carthage checkout
 script:
 - set -o pipefail
-- carthage build --no-skip-current
-- xcodebuild -project PactConsumerSwift.xcodeproj -scheme PactConsumerSwift test
-  -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- carthage build --no-skip-current --platform iOS --verbose
+- xcodebuild -project PactConsumerSwift.xcodeproj -scheme PactConsumerSwift test | xcpretty -c
 after_script: scripts/delete_keychain.sh
 after_success: scripts/build_children.sh
 env:

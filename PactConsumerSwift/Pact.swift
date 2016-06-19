@@ -15,8 +15,8 @@ public class Pact {
   }
 
   public func payload() -> [String: AnyObject] {
-    return [ "provider": provider, 
-      "consumer": consumer,
+    return [ "provider": [ "name": provider],
+      "consumer": [ "name": consumer],
       "interactions" : interactions.map({ $0.payload() }),
       "metadata": [ "pact-specification": [ "version": "1.0.0"] ]]
   }

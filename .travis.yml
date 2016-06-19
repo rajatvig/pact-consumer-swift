@@ -8,8 +8,8 @@ before_install:
 - carthage checkout
 script:
 - set -o pipefail
-- carthage build --no-skip-current --platform iOS
-- scripts/build.sh 
+- carthage build --no-skip-current --platform iOS --no-use-binaries
+- scripts/build.sh
 after_script: scripts/delete_keychain.sh
 after_success: scripts/build_children.sh
 env:

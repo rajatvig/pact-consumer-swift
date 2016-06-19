@@ -5,7 +5,7 @@ import Foundation
   private let mockServer: MockServer
   private var interactions: [Interaction] = []
   
-  private static let defaultPort = 1234
+  private static let defaultPort = 2345
   public var baseUrl: String {
     get {
       return "http://localhost:\(PactRunner.defaultPort)"
@@ -40,6 +40,7 @@ import Foundation
     mockServer.withPact(pact)
     testFunction{ () in
       if(!self.mockServer.matched()) {
+        print("Test didn't match expectations. Mismatches: ")
         print(self.mockServer.mismatches())
         fatalError("Fatal error: \(self.mockServer.mismatches())")
       }

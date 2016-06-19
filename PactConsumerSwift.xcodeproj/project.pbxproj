@@ -18,6 +18,8 @@
 		A11F1AF11A5CF84600DAB9CE /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F1AEF1A5CF84600DAB9CE /* Interaction.swift */; };
 		A1343CD41A6200C100DCD05E /* InteractionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1343CD31A6200C100DCD05E /* InteractionSpec.swift */; };
 		A1343CE41A63869500DCD05E /* PactVerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1343CE31A63869500DCD05E /* PactVerificationService.swift */; };
+		A136B2501D14C22400B4381E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A136B24F1D14C22400B4381E /* SwiftyJSON.framework */; };
+		A136B2511D14C25900B4381E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A136B24F1D14C22400B4381E /* SwiftyJSON.framework */; };
 		A17A5D3E1D0A7F9100C4BE1F /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A5D3D1D0A7F9100C4BE1F /* MockServer.swift */; };
 		A17A5D411D0A862F00C4BE1F /* Pact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A5D3F1D0A862F00C4BE1F /* Pact.swift */; };
 		A17A5D421D0A862F00C4BE1F /* PactRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A5D401D0A862F00C4BE1F /* PactRunner.swift */; };
@@ -30,6 +32,7 @@
 		A1EE189E1AA00498008B0E8C /* PactObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EE189D1AA00498008B0E8C /* PactObjectiveCTests.m */; };
 		A1EE18A41AA009A9008B0E8C /* OCAnimalServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EE18A31AA009A9008B0E8C /* OCAnimalServiceClient.m */; };
 		A1EE18A61AA00FC7008B0E8C /* PactSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AC5B21A87087B00F4524C /* PactSpecs.swift */; };
+		A1F6BA411D13B365008BC56C /* PactMockServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17A5D451D1114AC00C4BE1F /* PactMockServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		A1343CE31A63869500DCD05E /* PactVerificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PactVerificationService.swift; sourceTree = "<group>"; };
 		A1343CEB1A64D59E00DCD05E /* start_server.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = start_server.sh; sourceTree = "<group>"; };
 		A1343CEC1A64D59E00DCD05E /* stop_server.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = stop_server.sh; sourceTree = "<group>"; };
+		A136B24F1D14C22400B4381E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		A17A5D3D1D0A7F9100C4BE1F /* MockServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		A17A5D3F1D0A862F00C4BE1F /* Pact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pact.swift; sourceTree = "<group>"; };
 		A17A5D401D0A862F00C4BE1F /* PactRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PactRunner.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A136B2501D14C22400B4381E /* SwiftyJSON.framework in Frameworks */,
 				A17A5D461D1114AC00C4BE1F /* PactMockServer.framework in Frameworks */,
 				A10AC5AE1A85EFCF00F4524C /* BrightFutures.framework in Frameworks */,
 				A1E04E971A80971A006721F8 /* Alamofire.framework in Frameworks */,
@@ -90,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A136B2511D14C25900B4381E /* SwiftyJSON.framework in Frameworks */,
+				A1F6BA411D13B365008BC56C /* PactMockServer.framework in Frameworks */,
 				A10AC5AF1A86105B00F4524C /* BrightFutures.framework in Frameworks */,
 				A1E04EA81A809828006721F8 /* Quick.framework in Frameworks */,
 				A1E04EA91A809828006721F8 /* Nimble.framework in Frameworks */,
@@ -104,6 +111,7 @@
 		A11F1A611A5C890D00DAB9CE = {
 			isa = PBXGroup;
 			children = (
+				A136B24F1D14C22400B4381E /* SwiftyJSON.framework */,
 				A17A5D451D1114AC00C4BE1F /* PactMockServer.framework */,
 				A10AC5AD1A85EFCF00F4524C /* BrightFutures.framework */,
 				A1E04EA61A809828006721F8 /* Quick.framework */,
@@ -310,6 +318,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PactMockServer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -328,6 +337,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PactMockServer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "Run Script";
 			outputPaths = (

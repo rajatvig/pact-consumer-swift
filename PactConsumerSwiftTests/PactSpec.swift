@@ -12,11 +12,13 @@ class PactSpec: QuickSpec {
       let subject = Pact(provider: provider, consumer: consumer)
 
       it("returns the provider in payload") {
-        expect(subject.payload()["provider"] as? String).to(equal(provider))
+        let providerDict = subject.payload()["provider"]
+        expect(providerDict?["name"]).to(equal(provider))
       }
 
       it("returns the consumer in consumer") {
-        expect(subject.payload()["consumer"] as? String).to(equal(consumer))
+        let consumerDict = subject.payload()["consumer"]
+        expect(consumerDict?["name"]).to(equal(consumer))
       }
 
       it("includes pact version") {

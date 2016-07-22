@@ -18,6 +18,9 @@ clean:
 	$(XCODEBUILD) -scheme $(NAME)  -destination $(DEVICE_IOS)  clean | $(XCPRETTY)
 
 install:
+	brew update
+	brew install carthage
+	carthage build --platform iOS
 	$(GEM) install bundler
 	$(BUNDLE) install
 

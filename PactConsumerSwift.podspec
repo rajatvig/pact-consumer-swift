@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source       = { :git => "https://github.com/DiUS/pact-consumer-swift.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/rajatvig/pact-consumer-swift.git", :tag => "v#{s.version}" }
   s.source_files = 'PactConsumerSwift/**/*.swift'
   s.resources = 'scripts/start_server.sh', 'scripts/stop_server.sh'
   s.requires_arc = true

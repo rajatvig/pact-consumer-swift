@@ -36,5 +36,5 @@ lint_spec:
 
 push:
 	$(POD) repo add    $(NAME) git@github.com:VEVO/PodSpecs.git
-	$(POD) repo push   $(NAME) --allow-warnings --verbose DemoPod.podspec
+	$(POD) repo push   $(NAME) --allow-warnings --verbose $(NAME).podspec
 	$(POD) repo remove $(NAME)

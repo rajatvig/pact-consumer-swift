@@ -20,7 +20,7 @@ clean:
 install:
 	brew update
 	brew install carthage
-	carthage build --platform iOS
+	carthage bootstrap --no-use-binaries  --platform iOS
 	$(GEM) install bundler
 	$(BUNDLE) install
 

@@ -20,7 +20,6 @@ clean:
 install:
 	$(GEM) install bundler
 	$(BUNDLE) install
-	$(POD) install
 
 build:
 	$(XCODEBUILD) -scheme $(NAME) -destination $(DEVICE_IOS) clean build | $(XCPRETTY)
